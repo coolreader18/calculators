@@ -7,7 +7,6 @@ permalink: /importfromtext/
 text
 <script>
 var calcdata;
-
 function getClipboard() {
   navigator.clipboard.readText().then(function(text){
     calcdata = text;
