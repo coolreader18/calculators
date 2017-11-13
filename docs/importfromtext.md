@@ -8,8 +8,6 @@ permalink: /importfromtext/
 var calctemplate;
 function getCalcdata() {
   calctemplate = document.getElementById("calcinput").value;
-  alert("wow");
-  document.getElementById("calcinput").value = "hey";
 }
 </script>
 
