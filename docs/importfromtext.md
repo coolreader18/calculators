@@ -1,13 +1,15 @@
 ---
 permalink: /importfromtext/
 ---
-
-
-<button onClick="getClipboard()">Get from clipboard</button>
-text
 <script>
 var calcdata;
-function getClipboard() {
-    calcdata = window.clipboardData.getData('Text');
+</script>
+<input id="calcdata">
+
+<button onClick="getCalcdata()">Get from clipboard</button>
+<script>
+function getCalcdata() {
+  calcdata = document.getElementById("calcdata").value;
 }
 </script>
+
