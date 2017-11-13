@@ -8,8 +8,6 @@ text
 <script>
 var calcdata;
 function getClipboard() {
-  navigator.clipboard.readText().then(function(text){
-    calcdata = text;
-  });
+    calcdata = window.clipboardData.getData('Text');
 }
 </script>
