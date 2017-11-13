@@ -5,8 +5,9 @@ permalink: /importfromtext/
 var calcdata;
 
 function getClipboard() {
-  ClipboardEvent("paste");
-  calcdata = ClipboardEvent.clipboardData.getData("text");
+  navigator.clipboard.readText().then(function(text){
+    calcdata = text;
+  }
 }
 </script>
 
