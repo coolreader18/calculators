@@ -160,7 +160,7 @@ label {
   margin: 50px 0;
 }
 </style>
-<input id="calcinput" label="Paste calculator string here" name="calcstring" value=querySt(calcstring) >
+<input id="calcinput" label="Paste calculator string here" name="calcstring" value=querySt(calcstring); >
 
 <button onClick="getCalcdata()">Get from clipboard</button>
 <script>
