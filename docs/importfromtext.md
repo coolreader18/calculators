@@ -5,8 +5,9 @@ permalink: /importfromtext/
 
 <button onClick="getCalcdata()">Get from clipboard</button>
 <script>
+var calctemplate;
 function getCalcdata() {
-  alert(document.getElementById("calcinput").value);
+  calctemplate = document.getElementById("calcinput").value;
   alert("wow");
   document.getElementById("calcinput").value = "hey";
 }
