@@ -1,3 +1,6 @@
+---
+permalink: /importfromtext/
+---
 <script>
 var calcdata;
 
