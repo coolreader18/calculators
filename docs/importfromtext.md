@@ -10,3 +10,4 @@ calcdata = ClipboardEvent.clipboardData.getData("text")
 
 
 <button onClick="getClipboard()">Get from clipboard</button>
+text
