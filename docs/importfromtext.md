@@ -160,7 +160,7 @@ label {
   margin: 50px 0;
 }
 </style>
-<input id="calcinput" label="Paste calculator string here" name="calcstring">
+<input id="calcinput" label="Paste calculator string here" name="calcstring" value=querySt(calcstring) >
 
 <button onClick="getCalcdata()">Get from clipboard</button>
 <script>
@@ -168,5 +168,16 @@ var calctemplate;
 function getCalcdata() {
   calctemplate = document.getElementById("calcinput").value;
 }
+function querySt(ji) {
+    hu = window.location.search.substring(1);
+    gy = hu.split("&");
+    for (i=0;i<gy.length;i++) {
+        ft = gy[i].split("=");
+        if (ft[0] == ji) {
+            return ft[1];
+        }
+    }
+}
+var koko = querySt("koko");
 </script>
 
