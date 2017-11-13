@@ -1,6 +1,10 @@
 ---
 permalink: /importfromtext/
 ---
+
+
+<button onClick="getClipboard()">Get from clipboard</button>
+text
 <script>
 var calcdata;
 
@@ -10,7 +14,3 @@ function getClipboard() {
   }
 }
 </script>
-
-
-<button onClick="getClipboard()">Get from clipboard</button>
-text
