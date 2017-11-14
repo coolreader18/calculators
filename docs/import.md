@@ -1,5 +1,5 @@
 ---
-permalink: /import/
+permalink: /calc/
 ---
 <script src="/import.js">
 
