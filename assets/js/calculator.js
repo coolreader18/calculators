@@ -21,6 +21,6 @@ var calculator = {
 };
 
 function onDivLoad(){
-  var div = document.getElementById("calculator").innerHTML;
-  div = "<input type='text'>";
+  var div = document.getElementById("calculator");
+  div.appendChild(document.createElement("input"));
 }
