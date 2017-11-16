@@ -20,5 +20,7 @@ var calculator = {
   }
 };
 
-var div = document.getElementById("calculator").innerHTML;
-div = "<input type='text'>";
+function onDivLoad(){
+  var div = document.getElementById("calculator").innerHTML;
+  div = "<input type='text'>";
+}
