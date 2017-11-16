@@ -23,4 +23,4 @@ var calculator = {
 function calculateindiv() {
   document.getElementById("calculator").innerHTML = calculator.calculate();
 }
-alert(math.eval(calculator.data.equation);
+alert(math.eval(calculator.data.equation));
