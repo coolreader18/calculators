@@ -1,5 +1,3 @@
----
----
 var calculator = {
   data: {
     varlist: [],
