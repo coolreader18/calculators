@@ -21,4 +21,4 @@ var calculator = {
 };
 
 var div = document.getElementById("calculator").innerHTML;
-div = <input type="text">;
+div = "<input type='text'>";
