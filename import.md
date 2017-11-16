@@ -1,6 +1,7 @@
 ---
 permalink: /calc/
 ---
-<script src="import.js"></script>
+<script src="/calculator/assets/calculator.js">
+<script src="/calculator/assets/math.js">
 
-<div id=calculator></div>
+<p id="calculator"></p>
