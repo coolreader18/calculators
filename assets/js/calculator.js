@@ -22,5 +22,5 @@ var calculator = {
 
 function onDivLoad(){
   var div = document.getElementById("calculator");
-  div.appendChild(document.createElement("input"));
+  div.appendChild(document.createElement("input")).setAttribute("style", "border: 1px solid; border-radius: 10px;");
 }
