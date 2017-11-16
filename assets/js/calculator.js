@@ -20,7 +20,5 @@ var calculator = {
   }
 };
 
-function calculateindiv() {
-  document.getElementById("calculator").innerHTML = calculator.calculate();
-}
-alert(math.eval(calculator.data.equation));
+var div = document.getElementById("calculator").innerHTML;
+div = <input type="text">;
