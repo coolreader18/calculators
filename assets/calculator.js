@@ -1,7 +1,7 @@
 var calculator = {
   data: {
     varlist: [],
-    equation: "2*3"
+    equation: "2 * 3"
   },
   import: function(cstring) {
     calculator.data = JSON.parse(cstring);
@@ -20,5 +20,5 @@ var calculator = {
   }
 };
 
-document.getElementById("calculator").innerHTML = "kay";
+document.getElementById("calculator").innerHTML = calculate();
 alert(math.eval('1 * 2'));
