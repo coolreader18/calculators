@@ -15,6 +15,7 @@ var calculator = {
   },
   varvals: {},
   calculate: function() {
+    calculator.assignvars.apply(this, arguments)
     return math.eval(calculator.data.equation);
   }
 };
