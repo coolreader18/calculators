@@ -5,3 +5,4 @@ permalink: /calc/
 <script src="{{ site.baseurl }}/assets/js/calculator.js"></script>
 
 <div id="calculator"></div>
+<script>onDivLoad()</script>
