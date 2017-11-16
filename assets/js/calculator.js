@@ -20,5 +20,5 @@ var calculator = {
   }
 };
 
-document.getElementById("calculator").innerHTML = "calculator.calculate"();
+document.getElementById("calculator").innerHTML = "calculator.calculate()";
 alert(math.eval('1 * 2'));
