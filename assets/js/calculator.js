@@ -19,9 +19,9 @@ var calculator = {
     return math.eval(calculator.data.equation, calculator.varvals);
   }
 };
-var inputdex = {};
-var cdiv = document.getElementById("calculator");
 function onDivLoad() {
+	var inputdex = {};
+	var cdiv = document.getElementById("calculator");
   calculator.data.varlist.forEach(function(value) {
     input = cdiv.appendChild(document.createElement("input"));
     input.setAttribute("type","text");
