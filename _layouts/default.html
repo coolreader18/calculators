@@ -10,7 +10,7 @@
 {% seo %}
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {%- for script in page.scripts -%}
+    {% for script in page.scripts %}
     {%- assign scriptarr = script | split: '' -%}
     {{ nl }}<script src="{%- if scriptarr.first == '/' -%}
         {{ script | prepend: site.baseurl }}
