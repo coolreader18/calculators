@@ -21,9 +21,10 @@ var calculator = {
 };
 var inputdex = {};
 function onDivLoad(){
-  var cdiv = document.getElementById("calculator");
-  for (const value of varlist) {
-    var input = cdiv.appendChild(document.createElement("input"));
+  var cdiv = document.getElementById("calculator"),
+      input;
+  for (const value of calculator.data.varlist) {
+    input = cdiv.appendChild(document.createElement("input"));
     input.setAttribute("type","text");
     input.id = value;
     inputdex[value] = input;
