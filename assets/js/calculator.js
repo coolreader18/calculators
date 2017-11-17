@@ -31,7 +31,7 @@ function onDivLoad() {
     inputdex[value] = input;
     label = cdiv.insertBefore(document.createElement("label"), input)
     label.innerHTML = "$"+value+"$: ";
-    label.style.cssText = "width: "+calculator.data.varlist.reduce(function (a, b) { return a.length > b.length ? a : b; }) * 15+"px; display: inline-block;";
+    label.style.cssText = "width: "+calculator.data.varlist.reduce(function (a, b) { return a.length > b.length ? a : b; }).length * 15+"px; display: inline-block;";
     cdiv.appendChild(document.createElement("br"));
   });
 }
