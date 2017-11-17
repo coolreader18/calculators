@@ -1,3 +1,4 @@
+var MQ = MathQuill.getInterface(2);
 var calculator = {
   data: {
     varlist: ['a','b'],
