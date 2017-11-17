@@ -29,5 +29,6 @@ function onDivLoad() {
     input.id = value;
     inputdex[value] = input;
     cdiv.insertBefore(document.createElement("label"), input).innerHTML = value+":";
+    cdiv.appendChild(document.createElement("br"));
   });
 }
