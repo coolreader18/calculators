@@ -1,6 +1,6 @@
 var calculator = {
   data: {
-    varlist: [a,b],
+    varlist: ['a','b'],
     equation: '2 * 3'
   },
   import: function(cstring) {
