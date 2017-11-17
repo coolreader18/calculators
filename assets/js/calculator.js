@@ -21,14 +21,17 @@ var calculator = {
 };
 function onDivLoad() {
 	var inputdex = {},
-        input;
+        input,
+        label;
 	var cdiv = document.getElementById("calculator");
   calculator.data.varlist.forEach(function(value) {
     input = cdiv.appendChild(document.createElement("input"));
     input.setAttribute("type","text");
     input.id = value;
     inputdex[value] = input;
-    cdiv.insertBefore(document.createElement("label"), input).innerHTML = "$"+value+"$: ";
+    label = cdiv.insertBefore(document.createElement("label"), input)
+    label.innerHTML = "$"+value+"$: ";
+    label.style.cssText = "width: 10px; display: inline-block;";
     cdiv.appendChild(document.createElement("br"));
   });
 }
