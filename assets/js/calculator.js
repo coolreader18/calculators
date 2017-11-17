@@ -1,6 +1,6 @@
 var calculator = {
   data: {
-    varlist: [],
+    varlist: [a,b],
     equation: '2 * 3'
   },
   import: function(cstring) {
@@ -19,8 +19,14 @@ var calculator = {
     return math.eval(calculator.data.equation, calculator.varvals);
   }
 };
-
+var inputdex = {};
 function onDivLoad(){
-  var div = document.getElementById("calculator");
-  div.appendChild(document.createElement("input")).setAttribute("type","text");
+  var cdiv = document.getElementById("calculator");
+  for (const value of varlist) {
+    var input = cdiv.appendChild(document.createElement("input"));
+    input.setAttribute("type","text");
+    input.id = value;
+    inputdex[value] = input;
+    cdiv.insertBefore(document.createElement("label"), input).innerHTML = value+":";
+  }
 }
