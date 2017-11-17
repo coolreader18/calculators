@@ -20,14 +20,11 @@ var calculator = {
   }
 };
 var inputdex = {};
-function onDivLoad(){
-  var cdiv = document.getElementById("calculator"),
-      input;
-  for (let value of calculator.data.varlist) {
-    input = cdiv.appendChild(document.createElement("input"));
-    input.setAttribute("type","text");
-    input.id = value;
-    inputdex[value] = input;
-    cdiv.insertBefore(document.createElement("label"), input).innerHTML = value+":";
-  }
-}
+var cdiv = document.getElementById("calculator");
+calculator.data.varlist.forEach(function(value) {
+  input = cdiv.appendChild(document.createElement("input"));
+  input.setAttribute("type","text");
+  input.id = value;
+  inputdex[value] = input;
+  cdiv.insertBefore(document.createElement("label"), input).innerHTML = value+":";
+});
