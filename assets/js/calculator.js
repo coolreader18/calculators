@@ -12,26 +12,16 @@ var calculator = {
     return math.eval(calculator.data.equation, calculator.varvals);
   }
 };
-function onDivLoad() {
-  cdiv = document.getElementById("calculator");
-  hash = window.location.hash;
-  if (hash) {
-    calculator.import(hash.split("#")[1]);
-    hash = "";
-  } else {
-    calcInput();
-  }
-}
 function calcInput() {
-  var cinput = cdiv.appendchild(document.createElement("input"));
+  var cinput = cdiv.appendChild(document.createElement("input"));
   cinput.setAttribute("type","text");
   cinput.id = "calcinput";
   var label = cdiv.insertBefore(document.createElement("label"), cinput);
   label.innerHTML = "Paste here: ";
-  cdiv.appendchild(document.createElement("br"));
-  var button = cdiv.appendchild(document.createElement("button"));
+  cdiv.appendChild(document.createElement("br"));
+  var button = cdiv.appendChild(document.createElement("button"));
   button.innerHTML = "Load Calculator";
-  button.onclick = "calculator.import(document.getElementById("calcinput").value);";
+  button.setAttribute("onclick", "calculator.import(document.getElementById('calcinput').value);");
 }
 function setupCalc() {
   cdiv.innerHTML = "";
