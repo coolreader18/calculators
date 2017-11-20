@@ -30,7 +30,7 @@ function onDivLoad() {
     qdiv.appendChild(document.createElement("br"));
   });
   adiv = cdiv.appendChild(document.createElement("div"));
-  adiv.id = "answers";
+  adiv.id = "answer";
   genSolution();
 }
 function genSolution() {
@@ -38,4 +38,6 @@ function genSolution() {
     calculator.varvals[value] = inputdex[value].value;
   });
   adiv.innerHTML = "$$"+calculator.calculate()+"$$";
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub,"answer"]);
+
 }
