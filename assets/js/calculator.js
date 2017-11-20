@@ -6,7 +6,6 @@ var calculator = {
   import: function(cstring) {
     calculator.data = JSON.parse(cstring);
     setupCalc();
-    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"questions"]);
   },
   varvals: {},
   calculate: function() {
@@ -56,6 +55,7 @@ function setupCalc() {
   });
   adiv = cdiv.appendChild(document.createElement("div"));
   adiv.id = "answer";
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub,"questions"]);
   genSolution();
 }
 function genSolution() {
