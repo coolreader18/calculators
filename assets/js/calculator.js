@@ -1,7 +1,7 @@
 var calculator = {
   data: {
     varlist: ['a','b'],
-    equation: '2 * 3'
+    equation: 'a * b'
   },
   import: function(cstring) {
     calculator.data = JSON.parse(cstring);
