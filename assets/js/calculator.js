@@ -56,6 +56,7 @@ function setupCalc() {
   MathJax.Hub.Queue(['Typeset',MathJax.Hub,'questions']);
   adiv = cdiv.appendChild(document.createElement("div"));
   adiv.id = "answer";
+  genSolution();
 }
 function genSolution() {
   calculator.data.varlist.forEach(function(value) {
