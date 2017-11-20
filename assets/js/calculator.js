@@ -12,6 +12,16 @@ var calculator = {
     return math.eval(calculator.data.equation, calculator.varvals);
   }
 };
+function onDivLoad() {
+  cdiv = document.getElementById("calculator");
+  hash = window.location.hash;
+  if (hash) {
+    calculator.import(hash.split("#")[1]);
+    hash = "";
+  } else {
+    calcInput();
+  }
+}
 function calcInput() {
   var cinput = cdiv.appendChild(document.createElement("input"));
   cinput.setAttribute("type","text");
