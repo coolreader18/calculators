@@ -6,7 +6,6 @@ var calculator = {
   import: function(cstring) {
     calculator.data = JSON.parse(cstring);
     setupCalc();
-    MathJax.Hub.Queue(['Typeset',MathJax.Hub,'questions']);
   },
   varvals: {},
   calculate: function() {
@@ -17,8 +16,8 @@ function onDivLoad() {
   cdiv = document.getElementById("calculator");
   hash = window.location.hash;
   if (hash) {
-    window.location.hash = "";
     calculator.import(hash.split("#")[1]);
+    window.location.hash = "";
   } else {
     calcInput();
   }
@@ -54,6 +53,7 @@ function setupCalc() {
     label.setAttribute("tabindex","-1");
     qdiv.appendChild(document.createElement("br"));
   });
+  MathJax.Hub.Queue(['Typeset',MathJax.Hub,'questions']);
   adiv = cdiv.appendChild(document.createElement("div"));
   adiv.id = "answer";
 }
