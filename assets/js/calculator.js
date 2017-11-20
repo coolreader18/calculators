@@ -41,5 +41,4 @@ function genSolution() {
   });
   adiv.innerHTML = "$$"+calculator.calculate()+"$$";
   MathJax.Hub.Queue(["Typeset",MathJax.Hub,"answer"]);
-
 }
