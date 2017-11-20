@@ -18,10 +18,21 @@ function onDivLoad() {
   if (hash) {
     calculator.import(hash.split("#")[1]);
     hash = "";
+  } else {
+    calcInput();
   }
-  setupCalc();
+}
+function calcInput() {
+  var cinput = cdiv.appendchild(document.createElement("input"));
+  cinput.setAttribute("type","text");
+  var label cdiv.insertBefore(document.createElement("label"), cinput);
+  label.innerHTML = "Paste here: ";
+  cdiv.appendchild(document.createElement("br"));
+  var button = cdiv.appendchild(document.createElement("button"));
+  button.innerHTML = "Load Calculator";
 }
 function setupCalc() {
+  cdiv.innerHTML = "";
   inputdex = {};
   var input,
   label;
