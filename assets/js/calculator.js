@@ -5,6 +5,7 @@ var calculator = {
   },
   import: function(cstring) {
     calculator.data = JSON.parse(cstring);
+    setupCalc();
   },
   varvals: {},
   calculate: function() {
@@ -15,9 +16,8 @@ function onDivLoad() {
   cdiv = document.getElementById("calculator");
   hash = window.location.hash;
   if (hash) {
-    hash = hash.split("#")[1];
-    string = JSON.stringify(calculator.data);    
-    calculator.data = JSON.parse(hash);
+    calculator.import(hash.split("#")[1]);
+    history.pushState("", document.title, window.location.pathname);
   }
   setupCalc();
 }
