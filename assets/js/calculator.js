@@ -17,7 +17,7 @@ function onDivLoad() {
   hash = window.location.hash;
   if (hash) {
     calculator.import(hash.split("#")[1]);
-    history.pushState("", document.title, window.location.pathname);
+    hash = "";
   }
   setupCalc();
 }
