@@ -31,7 +31,7 @@ function calcInput() {
   cdiv.appendChild(document.createElement("br"));
   var button = cdiv.appendChild(document.createElement("button"));
   button.innerHTML = "Load Calculator";
-  button.setAttribute("onclick", "calculator.import(document.getElementById('calcinput').value);");
+  button.setAttribute("onclick", "calculator.import(document.getElementById('calcinput').value);MathJax.Hub.Queue(['Typeset',MathJax.Hub,'questions']);");
 }
 function setupCalc() {
   cdiv.innerHTML = "";
@@ -55,8 +55,6 @@ function setupCalc() {
   });
   adiv = cdiv.appendChild(document.createElement("div"));
   adiv.id = "answer";
-  MathJax.Hub.Queue(["Typeset",MathJax.Hub,"questions"]);
-  genSolution();
 }
 function genSolution() {
   calculator.data.varlist.forEach(function(value) {
