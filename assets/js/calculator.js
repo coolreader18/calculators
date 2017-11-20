@@ -6,6 +6,7 @@ var calculator = {
   import: function(cstring) {
     calculator.data = JSON.parse(cstring);
     setupCalc();
+    MathJax.Hub.Queue(['Typeset',MathJax.Hub,'questions']);
   },
   varvals: {},
   calculate: function() {
@@ -31,7 +32,7 @@ function calcInput() {
   cdiv.appendChild(document.createElement("br"));
   var button = cdiv.appendChild(document.createElement("button"));
   button.innerHTML = "Load Calculator";
-  button.setAttribute("onclick", "calculator.import(document.getElementById('calcinput').value); MathJax.Hub.Queue(['Typeset',MathJax.Hub,'questions']);");
+  button.setAttribute("onclick", "calculator.import(document.getElementById('calcinput').value);");
 }
 function setupCalc() {
   cdiv.innerHTML = "";
