@@ -12,10 +12,18 @@ var calculator = {
   }
 };
 function onDivLoad() {
+  cdiv = document.getElementById("calculator");
+  hash = window.location.hash;
+  if (hash) {
+    hash = hash.split("#")[1];
+    calculator.data = JSON.parse(hash);
+  }
+  setupCalc();
+}
+function setupCalc() {
   inputdex = {};
   var input,
   label;
-  cdiv = document.getElementById("calculator");
   qdiv = cdiv.appendChild(document.createElement("div"));
   qdiv.id = "questions";
   calculator.data.varlist.forEach(function(value, i) {
