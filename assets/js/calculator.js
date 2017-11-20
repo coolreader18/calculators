@@ -18,15 +18,17 @@ function onDivLoad() {
   cdiv = document.getElementById("calculator");
   qdiv = cdiv.appendChild(document.createElement("div"));
   qdiv.id = "questions";
-  calculator.data.varlist.forEach(function(value) {
+  calculator.data.varlist.forEach(function(value, i) {
     input = qdiv.appendChild(document.createElement("input"));
     input.setAttribute("type","text");
     input.id = value;
-    input.setAttribute("oninput","genSolution();")
+    input.setAttribute("oninput","genSolution();");
+    input.tabindex = i;
     inputdex[value] = input;
     label = qdiv.insertBefore(document.createElement("label"), input)
     label.innerHTML = "$"+value+"$: ";
     label.style.cssText = "width: "+(calculator.data.varlist.reduce(function (a, b) { return a.length > b.length ? a : b; })+': ').length * 10+"px; display: inline-block;";
+    label.tabindex = "-1";
     qdiv.appendChild(document.createElement("br"));
   });
   adiv = cdiv.appendChild(document.createElement("div"));
