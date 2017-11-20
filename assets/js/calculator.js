@@ -43,7 +43,7 @@ function onDivLoad() {
 }
 function genSolution() {
   calculator.data.varlist.forEach(function(value) {
-    calculator.varvals[value] = inputdex[value];
+    calculator.varvals[value] = inputdex[value].value;
   });
   adiv.innerHTML = "$$"+calculator.calculate()+"$$";
 }
