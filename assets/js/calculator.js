@@ -17,8 +17,8 @@ function onDivLoad() {
   cdiv = document.getElementById("calculator");
   hash = window.location.hash;
   if (hash) {
-    calculator.import(hash.split("#")[1]);
     window.location.hash = "";
+    calculator.import(hash.split("#")[1]);
   } else {
     calcInput();
   }
