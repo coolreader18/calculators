@@ -14,7 +14,7 @@ var calculator = {
 function onDivLoad() {
   inputdex = {};
   var input,
-      label;
+  label;
   cdiv = document.getElementById("calculator");
   qdiv = cdiv.appendChild(document.createElement("div"));
   qdiv.id = "questions";
