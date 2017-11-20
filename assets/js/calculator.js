@@ -16,7 +16,7 @@ function onDivLoad() {
   hash = window.location.hash;
   if (hash) {
     hash = hash.split("#")[1];
-    string = json.stringify;    
+    string = json.stringify(calculator.data);    
     calculator.data = JSON.parse(hash);
   }
   setupCalc();
