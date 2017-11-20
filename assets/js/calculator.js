@@ -20,18 +20,30 @@ var calculator = {
   }
 };
 function onDivLoad() {
-	var inputdex = {},
-        input,
-        label;
-	var cdiv = document.getElementById("calculator");
+  inputdex = {};
+  var input,
+      label;
+  cdiv = document.getElementById("calculator");
+  qdiv = cdiv.appendChild(document.createElement("div"));
+  qdiv.id = "questions";
   calculator.data.varlist.forEach(function(value) {
-    input = cdiv.appendChild(document.createElement("input"));
+    input = qdiv.appendChild(document.createElement("input"));
     input.setAttribute("type","text");
     input.id = value;
+    input.setAttribute("oninput","genSolution();")
     inputdex[value] = input;
-    label = cdiv.insertBefore(document.createElement("label"), input)
+    label = qdiv.insertBefore(document.createElement("label"), input)
     label.innerHTML = "$"+value+"$: ";
     label.style.cssText = "width: "+(calculator.data.varlist.reduce(function (a, b) { return a.length > b.length ? a : b; })+': ').length * 10+"px; display: inline-block;";
-    cdiv.appendChild(document.createElement("br"));
+    qdiv.appendChild(document.createElement("br"));
   });
+  adiv = cdiv.appendChild(document.createElement("div"));
+  adiv.id = "answers";
+  genSolution();
+}
+function genSolution() {
+  calculator.data.varlist.forEach(function(value) {
+    calculator.varvals[value] = inputdex[value];
+  });
+  adiv.innerHTML = "$$"+calculator.calculate()+"$$";
 }
