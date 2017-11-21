@@ -57,7 +57,7 @@ function setupCalc() {
   MathJax.Hub.Typeset(qdiv);
   adiv = cdiv.appendChild(document.createElement("div"));
   adiv.id = "answer";
-  adiv.innerHTML = "$$"+{}+"$$";
+  adiv.innerHTML = "$${}$$";
   MathJax.Hub.Queue(["Typeset",MathJax.Hub,adiv], function() {
     answer = MathJax.Hub.getAllJax(adiv)[0];
     genSolution();
