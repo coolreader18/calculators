@@ -31,6 +31,7 @@ function calcInput() {
   cdiv.appendChild(document.createElement("br"));
   var button = cdiv.appendChild(document.createElement("button"));
   button.innerHTML = "Load Calculator";
+  button.className = "btn";
   button.setAttribute("onclick", "calculator.import(document.getElementById('calcinput').value);");
 }
 function setupCalc() {
