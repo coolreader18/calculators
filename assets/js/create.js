@@ -1,4 +1,4 @@
-function onDivLoad() {
+function oncrDivLoad() {
   crdiv = document.getElementById("create");
   varinput = crdiv.appendChild(document.createElement("input"));
   varinput.setAttribute("type","text");
