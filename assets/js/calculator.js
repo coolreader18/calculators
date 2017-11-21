@@ -66,5 +66,5 @@ function genSolution() {
   calculator.data.varlist.forEach(function(value) {
     calculator.varvals[value] = math.eval(inputdex[value].value);
   });
-  answer.text(calculator.calculate());
+  answer.Text(calculator.calculate());
 }
