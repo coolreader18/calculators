@@ -12,7 +12,7 @@ var calculator = {
     return math.eval(calculator.data.equation, calculator.varvals);
   }
 };
-function onDivLoad() {
+function oncDivLoad() {
   cdiv = document.getElementById("calculator");
   hash = window.location.hash;
   if (hash) {
