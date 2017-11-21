@@ -18,5 +18,5 @@ function genCalc() {
   calculator.data.equation = equation.value;
   cdiv = document.getElementById("calculator");
   setupCalc();
-  MathJax.Hub.Queue(['Typeset',MathJax.Hub,'questions']);
+  MathJax.Hub.Queue(['Typeset',MathJax.Hub,"questions"]);
 }
