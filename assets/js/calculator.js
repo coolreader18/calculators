@@ -2,8 +2,13 @@ var calculator = {
   equation: "",
   import: function(cstring) {
     var regex = /%([^%]*)%/g;
-    calculator.varlist = cstring.match(regex);
-    calculator.reference = 
+    cstring.match(regex).forEach(function(variable, i) {
+      calculator.reference.push({});
+      calculator.reference[variable] = {};
+      calculator.reference[i].phold = alphanumeral(i);
+      calculator.reference[i].
+    });
+    calculator.reference =
     setupCalc();
   },
   varvals: {},
@@ -66,4 +71,16 @@ function genSolution() {
     calculator.varvals[value] = math.eval(inputdex[value].value);
   });
   answer.Text(calculator.calculate());
+}
+function alphanumeral(n) {
+    var ordA = 'a'.charCodeAt(0);
+    var ordZ = 'z'.charCodeAt(0);
+    var len = ordZ - ordA + 1;
+
+    var s = "";
+    while(n >= 0) {
+        s = String.fromCharCode(n % len + ordA) + s;
+        n = Math.floor(n / len) - 1;
+    }
+    return s;
 }
