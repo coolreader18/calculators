@@ -57,12 +57,15 @@ function setupCalc() {
   MathJax.Hub.Typeset(qdiv);
   adiv = cdiv.appendChild(document.createElement("div"));
   adiv.id = "answer";
-  genSolution();
+  adiv.innerHTML = "$$"+{}+"$$";
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub,adiv], function() {
+    answer = MathJax.Hub.getAllJax(adiv)[0];
+    genSolution();
+  });
 }
 function genSolution() {
   calculator.data.varlist.forEach(function(value) {
     calculator.varvals[value] = math.eval(inputdex[value].value);
   });
-  adiv.innerHTML = "$$"+calculator.calculate()+"$$";
-  MathJax.Hub.Queue(["Typeset",MathJax.Hub,adiv]);
+  answer.text(calculator.calculate());
 }
