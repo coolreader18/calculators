@@ -1,9 +1,10 @@
 var calculator = {
-  equation: "",
+  data: {
+    varlist: ['a','b'],
+    equation: 'a * b'
+  },
   import: function(cstring) {
-    var regex = /%([^%]*)%/g;
-    calculator.varlist = cstring.match(regex);
-    calculator.reference = 
+    calculator.data = JSON.parse(cstring);
     setupCalc();
   },
   varvals: {},
