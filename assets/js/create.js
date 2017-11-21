@@ -14,6 +14,6 @@ function onDivLoad() {
   button.setAttribute("onclick","genCalc();")
 }
 function genCalc() {
-  calculator.data.varlist = JSON.parse('[' + varinput.value + ']');
+  calculator.data.varlist = varinput.value.split(",");
   calculator.data.equation = equation.value;
 }
