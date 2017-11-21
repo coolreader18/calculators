@@ -16,5 +16,6 @@ function oncrDivLoad() {
 function genCalc() {
   calculator.data.varlist = varinput.value.split(",");
   calculator.data.equation = equation.value;
-  oncDivLoad();
+  cdiv = document.getElementById("calculator");
+  setupCalc();
 }
