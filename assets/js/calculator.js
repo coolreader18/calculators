@@ -54,10 +54,10 @@ function setupCalc() {
     label.setAttribute("tabindex","-1");
     qdiv.appendChild(document.createElement("br"));
   });
+  MathJax.Hub.Typeset(qdiv);
   adiv = cdiv.appendChild(document.createElement("div"));
   adiv.id = "answer";
   genSolution();
-  MathJax.Hub.Queue(["Typeset",MathJax.Hub,qdiv]);
 }
 function genSolution() {
   calculator.data.varlist.forEach(function(value) {
